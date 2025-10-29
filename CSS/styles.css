@@ -4,6 +4,7 @@
 	--primary-color: #cea561;
 	--black-ligth: #151515;
 	--body-color: #ffffff98;
+	--card-bg-color: #2b2b2b;
 }
 
 body {
@@ -36,6 +37,20 @@ header {
 	background-color: #0000;
 	position: absolute;
 	top: 0;
+}
+
+button {
+	padding: 16px 48px;
+	background-color: #0000;
+	border: solid 1px var(--primary-color);
+	border-radius: 12px;
+	font-size: 1rem;
+	color: #ececec;
+	transition: all 0.2s;
+}
+button:hover {
+	background-color: var(--primary-color);
+	color: var(--black-ligth);
 }
 
 .navbar {
@@ -183,4 +198,58 @@ header {
 }
 .service-card:last-child img {
 	width: 74px;
+}
+
+.flex-container {
+	max-width: 1320px;
+	width: 95%;
+	display: flex;
+	gap: 24px;
+}
+
+.package-card {
+	border: solid 1px var(--primary-color);
+	background-color: var(--card-bg-color);
+	border-radius: 12px;
+	padding: 48px 0;
+	text-align: center;
+	flex: 1;
+}
+.package-card h3,
+.package-card h4 {
+	font-family: Manrope;
+	font-size: 2rem;
+	font-weight: 400;
+	color: #fff;
+	margin: 0;
+}
+.package-card h4 {
+	color: var(--body-color);
+	font-weight: 500;
+	font-size: 1.9rem;
+	margin-top: 12px;
+	margin-bottom: 32px;
+}
+.package-card span {
+	font-size: 2.4rem;
+	font-weight: 500;
+	color: #fff;
+}
+.package-card ul {
+	margin: auto;
+	margin-bottom: 56px;
+	text-align: start;
+	max-width: 300px;
+}
+.package-card li {
+	font-weight: 300;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 16px;
+}
+.package-card li::before {
+	content: url(../assets/images/checkmark.svg);
+	display: inline-block;
+	height: 24px;
 }
