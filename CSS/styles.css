@@ -1,0 +1,135 @@
+:root {
+	--header-bg-color: #1b1b1b;
+	--main-bg-color: #151515;
+	--primary-color: #cea561;
+	--black-ligth: #151515;
+}
+
+body {
+	margin: 0;
+	font-family: Manrope;
+	letter-spacing: 0.15%;
+	background-color: var(--main-bg-color);
+}
+
+ul {
+	list-style: none;
+}
+
+h2,
+h3,
+h4 {
+	font-family: Cormorant Garamond;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+header {
+	font-size: 1.1rem;
+	width: 100vw;
+	background-color: #0000;
+	position: fixed;
+	top: 0;
+}
+
+.navbar {
+	max-width: 1300px;
+	width: 90%;
+	margin: auto;
+	padding-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 134px;
+}
+.navbar ul {
+	display: flex;
+	gap: 32px;
+}
+.navbar ul:last-child {
+	gap: 24px;
+}
+
+.logo {
+	font-family: League Spartan;
+	white-space: nowrap;
+}
+.logo span:first-child {
+	text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+		-1px 1px 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+	color: var(--header-bg-color);
+	font-weight: 400;
+}
+.logo span:last-child {
+	font-weight: 100;
+	color: var(--primary-color);
+}
+
+.nav-item {
+	font-weight: 100;
+	text-underline-offset: 4px;
+	white-space: nowrap;
+}
+.nav-item-home {
+	color: var(--primary-color);
+	text-decoration: underline;
+}
+
+.user-item {
+	background-color: var(--primary-color);
+}
+.user-item--sign {
+	padding: 16px 32px;
+	border-radius: 12px;
+	color: var(--black-ligth);
+	white-space: nowrap;
+}
+.user-item--img {
+	display: block;
+	width: 32px;
+	height: 32px;
+	border-radius: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.user-item--shop {
+	background-image: url(../assets/images/shop-icon.svg);
+}
+.user-item--search {
+	background-image: url(../assets/images/search-icon.svg);
+}
+
+.title-section {
+	box-sizing: border-box;
+	height: 516px;
+	background-color: var(--header-bg-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 192px 0 192px 0;
+	background-image: url('../assets/images/path182.svg'),
+		url('../assets/images/path110.svg'), url('../assets/images/path114.svg'),
+		url('../assets/images/path24.svg');
+	background-position: 495px 90px, 925px 386px, 1278px 200px, 308px 306px;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+}
+.title-container {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+.title {
+	color: #fff;
+	margin: 0;
+	font-size: 80px;
+	font-weight: 500;
+}
+.subtitle {
+	text-align: center;
+	margin: 0;
+	color: #ffffff77;
+	font-size: 1.3rem;
+}
