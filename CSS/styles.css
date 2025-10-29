@@ -52,6 +52,7 @@ button,
 	white-space: nowrap;
 }
 button:hover {
+	transform: scale(1.1);
 	background-color: var(--primary-color);
 	color: var(--black-ligth);
 }
@@ -320,7 +321,80 @@ button:hover {
 
 .contact-section {
 	height: 450px;
+	display: flex;
+	justify-content: center;
+	padding-top: 120px;
+	gap: 112px;
 }
+.contact-section div:first-child {
+	max-width: 340px;
+}
+.contact-section div h4 {
+	font-family: Manrope;
+	font-weight: 500;
+	color: #fff;
+	margin-bottom: 12px;
+	margin-top: 0;
+	font-size: 1.2rem;
+}
+.contact-section p,
+.contact-section a {
+	font-weight: 200;
+	line-height: 1.5;
+	color: var(--body-color);
+}
+.contact-section div p {
+	margin-bottom: 32px;
+}
+.navbar-social-media {
+	display: flex;
+	gap: 109px;
+}
+.navbar-social-media ul {
+	padding-left: 0;
+	display: flex;
+	margin-top: 0;
+	gap: 32px;
+}
+.contact-section-ul {
+	flex-direction: column;
+	gap: 20px !important;
+}
+.about-us--container {
+	padding-top: 20px;
+	padding-left: 0;
+	margin: 0;
+}
+.about-us--container li::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-right: 4px;
+	vertical-align: middle;
+}
+.about-us--container li:nth-child(1)::before {
+	background-image: url(../assets/images/system-uicons_location.svg);
+}
+.about-us--container li:nth-child(2)::before {
+	background-image: url(../assets/images/arcticons_phone.svg);
+}
+.about-us--container li:nth-child(3)::before {
+	background-image: url(../assets/images/circum_mail.svg);
+}
+.about-us--container span {
+	font-family: Cormorant Garamond;
+	color: #fff;
+	font-size: 1.2rem;
+}
+.about-us--container p {
+	margin-top: 4px;
+	margin-bottom: 20px !important;
+	margin-left: 26px;
+}
+
 .copyright {
 	padding: 32px;
 	font-size: 0.73rem;
