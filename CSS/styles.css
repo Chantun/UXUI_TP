@@ -39,14 +39,17 @@ header {
 	top: 0;
 }
 
-button {
-	padding: 16px 48px;
+button,
+.submit {
+	width: 200px;
+	padding: 16px 0;
 	background-color: #0000;
 	border: solid 1px var(--primary-color);
 	border-radius: 12px;
 	font-size: 1rem;
 	color: #ececec;
 	transition: all 0.2s;
+	white-space: nowrap;
 }
 button:hover {
 	background-color: var(--primary-color);
@@ -216,7 +219,8 @@ button:hover {
 	flex: 1;
 }
 .package-card h3,
-.package-card h4 {
+.package-card h4,
+.appointment-form h3 {
 	font-family: Manrope;
 	font-size: 2rem;
 	font-weight: 400;
@@ -252,4 +256,75 @@ button:hover {
 	content: url(../assets/images/checkmark.svg);
 	display: inline-block;
 	height: 24px;
+}
+
+.appointment-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	text-align: center;
+}
+.appointment-form h3 {
+	margin-bottom: 48px;
+}
+
+.buttons-container {
+	max-width: 872px;
+	margin-bottom: 72px;
+}
+.inputs-container {
+	max-width: 1320px;
+	grid-template-columns: 1fr 1fr;
+}
+.input {
+	background-color: var(--card-bg-color);
+	border: solid 1px #ffffff42;
+	border-radius: 12px;
+	padding: 24px 32px;
+	font-size: 1.2rem;
+	color: var(--body-color);
+}
+.submit {
+	margin-top: 48px;
+	background-color: var(--primary-color);
+	color: var(--black-ligth);
+	margin-bottom: 120px;
+}
+
+.updated-section {
+	max-height: 468px;
+	background-image: none;
+	flex-direction: column;
+}
+.updated-form {
+	margin-top: 32px;
+	width: 532px;
+	position: relative;
+}
+.updated-input {
+	padding: 16px 32px;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: var(--main-bg-color);
+}
+.updated-submit {
+	width: 125px;
+	padding: 16px;
+	margin: 0;
+	font-size: 1.2rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.contact-section {
+	height: 450px;
+}
+.copyright {
+	padding: 32px;
+	font-size: 0.73rem;
+	font-weight: 200;
+	text-align: center;
+	border-top: solid 2px #ffffff42;
 }
