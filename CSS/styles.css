@@ -2,6 +2,7 @@
 	--header-bg-color: #1b1b1b;
 	--main-bg-color: #151515;
 	--primary-color: #cea561;
+	--primary-color-transparency: #cea561aa;
 	--black-ligth: #151515;
 	--body-color: #ffffff98;
 	--card-bg-color: #2b2b2b;
@@ -50,6 +51,7 @@ button,
 	color: #ececec;
 	transition: all 0.2s;
 	white-space: nowrap;
+	cursor: pointer;
 }
 button:hover {
 	transform: scale(1.1);
@@ -248,6 +250,104 @@ button:hover {
 	color: #fff;
 	margin: 0;
 }
+
+.calendar {
+	width: 95%;
+	max-width: 648px;
+	padding: 16px 0;
+	background-color: var(--card-bg-color);
+	border: solid 1px var(--primary-color);
+	border-radius: 13px;
+	color: #ebebf542;
+	margin-bottom: 72px;
+}
+
+.calendar__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 25px 13px 25px;
+}
+
+.head__title {
+	font-size: 1rem;
+	font-weight: 500;
+	color: #fff;
+	position: relative;
+}
+.head__title::after {
+	content: '';
+	position: absolute;
+	right: -12px;
+	top: 50%;
+	width: 6px;
+	height: 11px;
+	background: url('../assets/images/forward_arrow.svg') no-repeat center;
+	background-size: cover;
+	transform: translateY(-50%);
+	pointer-events: none;
+}
+
+.head__buttons {
+	width: 51px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.head__buttons button {
+	width: auto;
+	padding: 0;
+	border: none;
+}
+.head__buttons button:hover {
+	background-color: #0000;
+}
+.head__buttons button:first-child .button--img {
+	rotate: 180deg;
+}
+
+.button--img {
+	width: 9px;
+	height: 17px;
+	background: url('../assets/images/forward_arrow.svg') no-repeat center;
+	background-size: cover;
+}
+
+.calendar__content {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	place-items: center;
+	gap: 6px;
+}
+
+.calendar__day {
+	font-size: 0.7rem;
+}
+
+.calendar__num {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	transition: all 0.2s;
+}
+
+.calendar__day--upcoming {
+	color: #fff;
+	cursor: pointer;
+}
+.calendar__day--upcoming:hover {
+	background-color: var(--primary-color-transparency);
+}
+.calendar__day--selected {
+	cursor: default;
+	color: var(--card-bg-color);
+	background-color: var(--primary-color);
+}
+
 .package-card h4 {
 	color: var(--body-color);
 	font-weight: 500;
