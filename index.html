@@ -25,9 +25,20 @@
 					<li>
 						<a href="" class="nav-item">About Us</a>
 					</li>
-					<li>
-						<a href="" class="nav-item">Services V</a>
-						<!-- desplegable -->
+					<li class="dropdown">
+						<a href="" class="nav-item"
+							>Services <img src="assets/images/DropDown.svg" alt=""
+						/></a>
+						<ul class="dropdown-items">
+							<li><a href="#">Hair Cut</a></li>
+							<li><a href="#">Shaving</a></li>
+							<li><a href="#">Hair Dye</a></li>
+							<li><a href="#">Facial</a></li>
+							<li><a href="#">Keratin Treatment</a></li>
+							<li><a href="#">Hair Removal</a></li>
+							<li><a href="#">Hair Treatment</a></li>
+							<li><a href="#">Wedding Package</a></li>
+						</ul>
 					</li>
 					<li>
 						<a href="" class="nav-item">Pricing</a>
@@ -153,7 +164,7 @@
 					</p>
 				</div>
 				<form action="" class="appointment-form">
-					<div class="calendar"></div>
+					<article class="calendar"></article>
 					<h3>Select A Time</h3>
 					<div class="flex-container buttons-container">
 						<button>8:30 am - 9:30 am</button><button>9:30 am - 10:30 am</button
@@ -173,7 +184,20 @@
 							type="number"
 							class="input"
 							placeholder="Enter Phone Number *"
-						/><input type="text" class="input" placeholder="Select Service" />
+						/>
+						<div class="select-container input">
+							<select name="sevice" class="input--select">
+								<option value="">Select Service</option>
+								<option value="hair_cut">Hair Cut</option>
+								<option value="shaving">Shaving</option>
+								<option value="hair_dye">Hair Dye</option>
+								<option value="facial">Facial</option>
+								<option value="keratin">Keratin Treatment</option>
+								<option value="hair_removal">Hair Removal</option>
+								<option value="hair_treatment">Hair Treatment</option>
+								<option value="wedding">Wedding Package</option>
+							</select>
+						</div>
 					</div>
 					<input type="submit" value="Book Appointment" class="submit" />
 				</form>

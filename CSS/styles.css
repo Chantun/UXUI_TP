@@ -10,7 +10,7 @@
 body {
 	margin: 0;
 	font-family: Manrope;
-	letter-spacing: 0.15%;
+	letter-spacing: 0.15;
 	background-color: var(--main-bg-color);
 	color: var(--body-color);
 	overflow-x: hidden;
@@ -73,6 +73,26 @@ button:hover {
 }
 .navbar ul:last-child {
 	gap: 24px;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown-items {
+	display: none !important;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: #444;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	min-width: 150px;
+}
+
+.dropdown:hover .dropdown-items {
+	display: block !important;
 }
 
 .logo {
@@ -291,6 +311,38 @@ button:hover {
 	background-color: var(--primary-color);
 	color: var(--black-ligth);
 	margin-bottom: 120px;
+}
+
+.select-container {
+	padding: 0;
+	display: flex;
+	position: relative;
+}
+
+.input--select {
+	padding-left: 32px;
+	width: 100%;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	cursor: pointer;
+	background-color: #0000;
+	border: none;
+	font-size: 1.2rem;
+	color: var(--body-color);
+}
+
+.select-container::after {
+	content: '';
+	position: absolute;
+	right: 32px;
+	top: 50%;
+	width: 20px;
+	height: 20px;
+	background: url('../assets/images/DropDown.svg') no-repeat center;
+	background-size: contain;
+	transform: translateY(-50%);
+	pointer-events: none;
 }
 
 .updated-section {
