@@ -59,7 +59,11 @@ button:hover {
 	color: var(--black-ligth);
 }
 
-.navbar {
+.grid-container {
+	display: grid;
+}
+
+.nav {
 	max-width: 1300px;
 	width: 90%;
 	margin: auto;
@@ -69,69 +73,82 @@ button:hover {
 	justify-content: center;
 	gap: 134px;
 }
-.navbar ul {
+.nav ul {
 	display: flex;
 	gap: 32px;
 }
-.navbar ul:last-child {
+.nav ul:last-child {
 	gap: 24px;
+}
+
+.nav__logo {
+	font-family: League Spartan;
+	white-space: nowrap;
+}
+.nav__logo span:first-child {
+	text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
+		-1px 1px 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+	color: var(--header-bg-color);
+	font-weight: 400;
+}
+.nav__logo span:last-child {
+	font-weight: 100;
+	color: var(--primary-color);
+}
+
+.nav__item {
+	font-weight: 100;
+	text-underline-offset: 4px;
+	white-space: nowrap;
+}
+.nav__item--home {
+	color: var(--primary-color);
+	text-decoration: underline;
 }
 
 .dropdown {
 	position: relative;
 }
 
-.dropdown-items {
+.dropdown__items {
 	display: none !important;
 	position: absolute;
-	top: 100%;
+	top: 110%;
 	left: 0;
-	background: #444;
+	background: var(--card-bg-color);
+	border: solid 1px var(--primary-color);
+	border-radius: 12px;
 	list-style: none;
-	padding: 0;
-	margin: 0;
+	padding: 16px 10px;
 	min-width: 150px;
+}
+.dropdown__items li {
+	margin-bottom: 4px;
+}
+.dropdown__items a {
+	color: var(--body-color);
+	font-weight: 300;
+	font-size: 0.9rem;
+}
+.dropdown__items a:hover {
+	color: #fff;
+	text-decoration: underline;
 }
 
 .dropdown:hover .dropdown-items {
 	display: block !important;
 }
 
-.logo {
-	font-family: League Spartan;
-	white-space: nowrap;
-}
-.logo span:first-child {
-	text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff,
-		-1px 1px 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
-	color: var(--header-bg-color);
-	font-weight: 400;
-}
-.logo span:last-child {
-	font-weight: 100;
-	color: var(--primary-color);
-}
-
-.nav-item {
-	font-weight: 100;
-	text-underline-offset: 4px;
-	white-space: nowrap;
-}
-.nav-item-home {
-	color: var(--primary-color);
-	text-decoration: underline;
-}
-
-.user-item {
+.user-info {
 	background-color: var(--primary-color);
 }
-.user-item--sign {
+.user-info__sign {
 	padding: 16px 32px;
 	border-radius: 12px;
 	color: var(--black-ligth);
 	white-space: nowrap;
 }
-.user-item--img {
+.user-info__img {
 	display: block;
 	width: 32px;
 	height: 32px;
@@ -139,10 +156,10 @@ button:hover {
 	background-position: center center;
 	background-repeat: no-repeat;
 }
-.user-item--shop {
+.user-info__shop {
 	background-image: url(../assets/images/shop-icon.svg);
 }
-.user-item--search {
+.user-info__search {
 	background-image: url(../assets/images/search-icon.svg);
 }
 
@@ -153,6 +170,7 @@ button:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 	padding: 192px 0 192px 0;
 	background-image: url('../assets/images/path182.svg'),
 		url('../assets/images/path110.svg'), url('../assets/images/path114.svg'),
@@ -160,10 +178,9 @@ button:hover {
 	background-position: 495px 90px, 925px 386px, 1278px 200px, 308px 306px;
 	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 }
-.title-container {
+.div-align {
 	max-width: 620px;
 	text-align: center;
-	/* margin: auto; */
 }
 .title-container h2 {
 	margin-bottom: 8px;
@@ -174,6 +191,9 @@ button:hover {
 	font-size: 5rem;
 	font-weight: 500;
 }
+.title--service {
+	font-size: 4rem;
+}
 .subtitle {
 	margin: 0;
 	font-size: 1.3rem;
@@ -181,26 +201,23 @@ button:hover {
 }
 
 .main-section {
+	max-width: 1320px;
 	display: flex;
+	margin: auto;
 	flex-direction: column;
 	align-items: center;
 	padding-top: 120px;
 	gap: 80px;
-}
-.title--service {
-	font-size: 4rem;
+	text-align: center;
 }
 
-.grid-container {
-	max-width: 1320px;
-	width: 95%;
-	display: grid;
+.services-container {
+	width: 100%;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 1fr 1fr;
 	gap: 48px 24px;
 }
-
-.service-card {
+.service__card {
 	padding: 56px 0;
 	border: solid 1px var(--primary-color);
 	border-radius: 12px;
@@ -212,28 +229,27 @@ button:hover {
 	align-items: center;
 	justify-content: center;
 }
-.service-card p {
+.service__card p {
 	margin: 0;
 	font-weight: 300;
 	max-width: 200px;
 	margin: auto;
 	font-size: 3.2rem;
 }
-.service-card img {
+.service__card img {
 	width: 110px;
 }
-.service-card:last-child img {
+.service__card:last-child img {
 	width: 74px;
 }
 
 .flex-container {
-	max-width: 1320px;
-	width: 95%;
+	width: 100%;
 	display: flex;
 	gap: 24px;
 }
 
-.package-card {
+.package__card {
 	border: solid 1px var(--primary-color);
 	background-color: var(--card-bg-color);
 	border-radius: 12px;
@@ -241,8 +257,8 @@ button:hover {
 	text-align: center;
 	flex: 1;
 }
-.package-card h3,
-.package-card h4,
+.package__card h3,
+.package__card h4,
 .appointment-form h3 {
 	font-family: Manrope;
 	font-size: 2rem;
@@ -348,32 +364,32 @@ button:hover {
 	background-color: var(--primary-color);
 }
 
-.package-card h4 {
+.package__card h4 {
 	color: var(--body-color);
 	font-weight: 500;
 	font-size: 1.9rem;
 	margin-top: 12px;
 	margin-bottom: 32px;
 }
-.package-card span {
+.package__card span {
 	font-size: 2.4rem;
 	font-weight: 500;
 	color: #fff;
 }
-.package-card ul {
+.package__card ul {
 	margin: auto;
 	margin-bottom: 56px;
 	text-align: start;
 	max-width: 300px;
 }
-.package-card li {
+.package__card li {
 	font-weight: 300;
 	display: flex;
 	align-items: center;
 	gap: 8px;
 	margin-bottom: 16px;
 }
-.package-card li::before {
+.package__card li::before {
 	content: url(../assets/images/checkmark.svg);
 	display: inline-block;
 	height: 24px;
@@ -394,11 +410,12 @@ button:hover {
 	max-width: 872px;
 	margin-bottom: 72px;
 }
-.inputs-container {
-	max-width: 1320px;
+.appointment__inputs-container {
+	width: 100%;
 	grid-template-columns: 1fr 1fr;
+	gap: 40px 24px;
 }
-.input {
+.appointment__input {
 	background-color: var(--card-bg-color);
 	border: solid 1px #ffffff42;
 	border-radius: 12px;
@@ -406,19 +423,12 @@ button:hover {
 	font-size: 1.2rem;
 	color: var(--body-color);
 }
-.submit {
-	margin-top: 48px;
-	background-color: var(--primary-color);
-	color: var(--black-ligth);
-	margin-bottom: 120px;
-}
 
 .select-container {
 	padding: 0;
 	display: flex;
 	position: relative;
 }
-
 .input--select {
 	padding-left: 32px;
 	width: 100%;
@@ -430,6 +440,12 @@ button:hover {
 	border: none;
 	font-size: 1.2rem;
 	color: var(--body-color);
+}
+.submit {
+	margin-top: 48px;
+	background-color: var(--primary-color);
+	color: var(--black-ligth);
+	margin-bottom: 120px;
 }
 
 .select-container::after {
@@ -498,17 +514,17 @@ button:hover {
 .contact-section div p {
 	margin-bottom: 32px;
 }
-.navbar-social-media {
+.nav-social-media {
 	display: flex;
 	gap: 109px;
 }
-.navbar-social-media ul {
+.nav-social-media ul {
 	padding-left: 0;
 	display: flex;
 	margin-top: 0;
 	gap: 32px;
 }
-.contact-section-ul {
+.contact-section__ul {
 	flex-direction: column;
 	gap: 20px !important;
 }
