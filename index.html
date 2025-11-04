@@ -15,20 +15,20 @@
 	<body>
 		<header>
 			<nav class="nav">
-				<a href="" class="nav__logo">
+				<a href="#" class="nav__logo">
 					<h1>Gloss <span>&</span> <span>Glam</span></h1>
 				</a>
-				<ul>
+				<ul class="nav__items">
 					<li>
-						<a href="" class="nav__item nav__item--home">Home</a>
+						<a href="#" class="nav__item nav__item--home">Home</a>
 					</li>
 					<li>
-						<a href="" class="nav__item">About Us</a>
+						<a href="#services" class="nav__item">About Us</a>
 					</li>
 					<li class="dropdown">
-						<a href="" class="nav__item"
+						<span class="nav__item"
 							>Services <img src="assets/images/DropDown.svg" alt=""
-						/></a>
+						/></span>
 						<ul class="dropdown__items">
 							<li><a href="#">Hair Cut</a></li>
 							<li><a href="#">Shaving</a></li>
@@ -41,24 +41,25 @@
 						</ul>
 					</li>
 					<li>
-						<a href="" class="nav__item">Pricing</a>
+						<a href="#pricing" class="nav__item">Pricing</a>
 					</li>
 					<li>
-						<a href="" class="nav__item">Appointment</a>
+						<a href="#appointment" class="nav__item">Appointment</a>
 					</li>
 					<li>
-						<a href="" class="nav__item">Contact</a>
+						<a href="#contact" class="nav__item">Contact</a>
 					</li>
 				</ul>
 				<ul>
 					<li>
-						<a href="" class="user-info user-info__img user-info__shop"></a>
+						<a href="#" class="user-info user-info__img user-info__shop"></a>
+					</li>
+					<li class="search-container">
+						<button class="user-info user-info__img user-info__search"></button>
+						<input type="text" placeholder="Search..." class="search" />
 					</li>
 					<li>
-						<a href="" class="user-info user-info__img user-info__search"></a>
-					</li>
-					<li>
-						<a class="user-info user-info__sign" href="">Sign Up</a>
+						<a class="user-info user-info__sign" href="#">Sign Up</a>
 					</li>
 				</ul>
 			</nav>
@@ -72,7 +73,7 @@
 			</section>
 			<section class="main-section">
 				<div class="div-align">
-					<h2 class="title title--service">Our Services</h2>
+					<h2 id="services" class="title title--service">Our Services</h2>
 					<p>
 						Borem ipsum dolor sit amet, consectetur adipiscin elit. Nunc
 						vulputate libero amet, consectetur adipiscin
@@ -115,10 +116,10 @@
 			</section>
 			<section class="main-section">
 				<div class="title-container">
-					<h2 class="title title--service">Our Packages</h2>
+					<h2 id="pricing" class="title title--service">Our Packages</h2>
 					<p>Choose The Option That Fits You The Best</p>
 				</div>
-				<div class="flex-container">
+				<div class="flex-container package__container">
 					<article class="package__card">
 						<h3>Grooming Package</h3>
 						<h4>$<span>499</span></h4>
@@ -156,72 +157,30 @@
 			</section>
 			<section class="main-section">
 				<div class="title-container">
-					<h2 class="title title--service">Make An Appointment</h2>
+					<h2 id="appointment" class="title title--service">
+						Make An Appointment
+					</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
 						condimentum justo sit amet dui feugiat, ut consectetur lacus
 						consectetur.
 					</p>
 				</div>
-				<form action="" class="appointment-form">
-					<article class="calendar">
+				<form id="appointment_form" action="" class="appointment-form">
+					<article id="calendar" class="calendar">
 						<div class="calendar__head">
-							<span class="head__title">June 2025</span>
+							<span id="calendar-title" class="head__title"></span>
 							<div class="head__buttons">
-								<button>
+								<button disabled id="previous" type="button" class="disabled">
 									<div class="button--img"></div>
 								</button>
-								<button>
+								<button id="next" type="button">
 									<div class="button--img"></div>
 								</button>
 							</div>
 						</div>
-						<div class="calendar__content">
-							<span class="calendar__day">SUN</span>
-							<span class="calendar__day">MON</span>
-							<span class="calendar__day">TUE</span>
-							<span class="calendar__day">WED</span>
-							<span class="calendar__day">THU</span>
-							<span class="calendar__day">FRI</span>
-							<span class="calendar__day">SAT</span>
-							<span class="calendar__num"></span>
-							<span class="calendar__num"></span>
-							<span class="calendar__num"></span>
-							<span class="calendar__num">1</span>
-							<span class="calendar__num">2</span>
-							<span class="calendar__num">3</span>
-							<span class="calendar__num">4</span>
-							<span class="calendar__num">5</span>
-							<span class="calendar__num">6</span>
-							<span class="calendar__num">7</span>
-							<span class="calendar__num">8</span>
-							<span class="calendar__num calendar__num--upcoming">9</span>
-							<span class="calendar__num calendar__num--upcoming">10</span>
-							<span class="calendar__num calendar__num--selected">11</span>
-							<span class="calendar__num calendar__num--upcoming">12</span>
-							<span class="calendar__num calendar__num--upcoming">13</span>
-							<span class="calendar__num calendar__num--upcoming">14</span>
-							<span class="calendar__num calendar__num--upcoming">15</span>
-							<span class="calendar__num calendar__num--upcoming">16</span>
-							<span class="calendar__num calendar__num--upcoming">17</span>
-							<span class="calendar__num calendar__num--upcoming">18</span>
-							<span class="calendar__num calendar__num--upcoming">19</span>
-							<span class="calendar__num calendar__num--upcoming">20</span>
-							<span class="calendar__num calendar__num--upcoming">21</span>
-							<span class="calendar__num calendar__num--upcoming">22</span>
-							<span class="calendar__num calendar__num--upcoming">23</span>
-							<span class="calendar__num calendar__num--upcoming">24</span>
-							<span class="calendar__num calendar__num--upcoming">25</span>
-							<span class="calendar__num calendar__num--upcoming">26</span>
-							<span class="calendar__num calendar__num--upcoming">27</span>
-							<span class="calendar__num calendar__num--upcoming">28</span>
-							<span class="calendar__num calendar__num--upcoming">29</span>
-							<span class="calendar__num calendar__num--upcoming">30</span>
-							<span class="calendar__num calendar__num--upcoming">31</span>
-							<span class="calendar__num"></span>
-						</div>
+						<div class="calendar__content"></div>
 					</article>
-
 					<h3>Select A Time</h3>
 					<div class="flex-container buttons-container">
 						<button>8:30 am - 9:30 am</button><button>9:30 am - 10:30 am</button
@@ -261,13 +220,13 @@
 			</section>
 			<section class="title-section updated-section">
 				<div class="title-container">
-					<h2 class="title">Stay Updated</h2>
+					<h2 id="contact" class="title">Stay Updated</h2>
 					<p class="subtitle">
 						Borem ipsum dolor sit amet, consectetur adipiscin elit. Nunc
 						vulputate libero amet, consectetur adipiscin
 					</p>
 				</div>
-				<form action="" class="updated-form">
+				<form id="contact_form" class="updated-form">
 					<input
 						type="email"
 						class="appointment__input updated-input"
@@ -288,17 +247,17 @@
 					<nav class="nav-social-media">
 						<ul>
 							<li>
-								<a href=""
+								<a href="https://www.facebook.com/" target="_blank"
 									><img src="assets/images/facebook.svg" alt="facebook"
 								/></a>
 							</li>
 							<li>
-								<a href=""
+								<a href="https://www.twitter.com/" target="_blank"
 									><img src="assets/images/twitterbird.svg" alt="twitter"
 								/></a>
 							</li>
 							<li>
-								<a href=""
+								<a href="https://www.linkedin.com/" target="_blank"
 									><img src="assets/images/linkedin.svg" alt="linkedin"
 								/></a>
 							</li>
@@ -355,5 +314,8 @@
 				<p>Copyright © 2023 CryptoVault. All Rights Reserved</p>
 			</section>
 		</footer>
+
+		<script type="module" src="scripts/script.js"></script>
+		<script type="module" src="scripts/calendar.js"></script>
 	</body>
 </html>

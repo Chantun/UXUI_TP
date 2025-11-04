@@ -11,7 +11,6 @@
 body {
 	margin: 0;
 	font-family: Manrope;
-	letter-spacing: 0.15;
 	background-color: var(--main-bg-color);
 	color: var(--body-color);
 	overflow-x: hidden;
@@ -52,7 +51,7 @@ button:hover {
 }
 
 .flex-container {
-	width: 100%;
+	width: 95%;
 	display: flex;
 	gap: 24px;
 }
@@ -75,13 +74,12 @@ header {
 
 .nav {
 	max-width: 1300px;
-	width: 90%;
+	width: 95%;
 	margin: auto;
 	padding-top: 30px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: 134px;
+	justify-content: space-between;
 }
 .nav ul {
 	display: flex;
@@ -110,6 +108,7 @@ header {
 	font-weight: 100;
 	text-underline-offset: 4px;
 	white-space: nowrap;
+	color: #fff;
 }
 .nav__item:hover {
 	text-decoration: underline;
@@ -152,28 +151,59 @@ header {
 	display: block !important;
 }
 
+.search-container {
+	display: flex;
+	align-items: center;
+}
+
+.search {
+	width: 100%;
+	max-width: 120px;
+	box-sizing: border-box;
+	display: none;
+	height: 34px;
+	padding-left: 20px;
+	position: relative;
+	z-index: 9;
+	left: -16px;
+	border: none;
+	border-radius: 0 24px 24px 0;
+	background-color: var(--primary-color);
+}
+.search::placeholder {
+	color: var(--black-ligth);
+}
+.search:focus {
+	outline: none;
+}
+
 .user-info {
 	background-color: var(--primary-color);
 }
+
 .user-info__sign {
 	padding: 16px 32px;
 	border-radius: 12px;
 	color: var(--black-ligth);
 	white-space: nowrap;
 }
+
 .user-info__img {
 	display: block;
-	width: 32px;
-	height: 32px;
+	width: 34px;
+	height: 34px;
 	border-radius: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+
 .user-info__shop {
 	background-image: url(../assets/images/shop-icon.svg);
 }
+
 .user-info__search {
 	background-image: url(../assets/images/search-icon.svg);
+	z-index: 10;
 }
 
 /* Titulo */
@@ -203,7 +233,7 @@ header {
 .title {
 	color: #fff;
 	margin: 0;
-	font-size: 5rem;
+	font-size: 5em;
 	font-weight: 500;
 }
 .title--service {
@@ -229,7 +259,7 @@ header {
 }
 
 .services-container {
-	width: 100%;
+	width: 95%;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 1fr 1fr;
 	gap: 48px 24px;
@@ -319,6 +349,7 @@ header {
 	align-items: center;
 	width: 100%;
 	text-align: center;
+	padding-bottom: 120px;
 }
 .appointment-form h3 {
 	margin-bottom: 48px;
@@ -330,7 +361,7 @@ header {
 }
 
 .appointment__inputs-container {
-	width: 100%;
+	width: 95%;
 	grid-template-columns: 1fr 1fr;
 	gap: 40px 24px;
 }
@@ -380,7 +411,6 @@ header {
 
 .input--select {
 	padding-left: 32px;
-	width: 100%;
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -395,7 +425,6 @@ header {
 	margin-top: 48px;
 	background-color: var(--primary-color);
 	color: var(--black-ligth);
-	margin-bottom: 120px;
 }
 .submit:hover {
 	transform: scale(1.1);
@@ -460,8 +489,15 @@ header {
 .button--img {
 	width: 9px;
 	height: 17px;
-	background: url('../assets/images/forward_arrow.svg') no-repeat center;
-	background-size: cover;
+	background-color: var(--primary-color);
+	-webkit-mask: url('../assets/images/forward_arrow.svg') no-repeat center;
+	mask: url('../assets/images/forward_arrow.svg') no-repeat center;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+}
+
+.disabled .button--img {
+	background-color: var(--body-color);
 }
 
 .calendar__content {
@@ -486,12 +522,17 @@ header {
 	border-radius: 100%;
 	transition: all 0.2s;
 }
-
+.calendar__num--current {
+	color: var(--primary-color);
+	cursor: pointer;
+}
 .calendar__num--upcoming {
 	color: #fff;
 	cursor: pointer;
 }
-.calendar__num--upcoming:hover {
+.calendar__num--upcoming:hover,
+.calendar__num--current:hover {
+	color: #fff;
 	background-color: var(--primary-color-transparency);
 }
 .calendar__num--selected {
@@ -624,4 +665,152 @@ header {
 	font-weight: 200;
 	text-align: center;
 	border-top: solid 2px #ffffff42;
+}
+
+@media screen and (max-width: 1400px) {
+	.nav .nav__items {
+		display: none;
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	header {
+		position: relative;
+	}
+
+	.nav {
+		flex-direction: column;
+		padding: 20px 0;
+	}
+	.nav ul {
+		position: sticky;
+		top: 0;
+		box-sizing: border-box;
+		width: 95%;
+		padding: 0;
+		justify-content: space-between;
+	}
+
+	.user-info__sign {
+		padding: 0;
+		border-radius: 100%;
+		font-size: 0;
+		display: block;
+		width: 32px;
+		height: 32px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-image: url(../assets/images/user-6767.svg);
+		background-size: 20px;
+	}
+
+	.search-container {
+		flex: 1;
+	}
+	.search {
+		display: block;
+		max-width: 100%;
+	}
+
+	.services-container {
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: 1fr;
+		gap: 2%;
+	}
+	.service__card {
+		box-sizing: border-box;
+		padding: 14px 0;
+	}
+	.service__card p {
+		font-size: 1.4rem;
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+	.service__card img {
+		width: 40%;
+	}
+	.service__card:last-child img {
+		height: 40%;
+	}
+
+	.title-section {
+		height: auto;
+		padding: 20px;
+	}
+
+	.main-section {
+		padding: 40px 0;
+		gap: 30px;
+	}
+
+	.package__container {
+		width: 100%;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+	}
+	.package__container::-webkit-scrollbar {
+		display: none; /* Chrome/Safari */
+	}
+	.package__card {
+		flex: 0 0 80%;
+		max-width: 400px;
+		scroll-snap-align: start;
+	}
+	.package__card ul {
+		padding-right: 40px;
+	}
+
+	.title {
+		font-size: 3em;
+	}
+	.title-container p {
+		margin: 0 10px;
+		font-size: 1em;
+	}
+
+	.buttons-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px 10px;
+	}
+	.buttons-container button {
+		width: auto;
+	}
+
+	.appointment__inputs-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.updated-form {
+		width: 100%;
+	}
+
+	.contact-section {
+		padding: 0;
+		height: auto;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.nav-social-media {
+		display: none;
+	}
+
+	.appointment-form {
+		padding-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.contact-section div:first-child {
+		display: none;
+	}
+	.contact-section {
+		flex-direction: column;
+	}
 }
