@@ -12,7 +12,6 @@ function verifyMonth() {
 		nextButton.classList += ' disabled';
 		nextButton.disabled = true;
 	}
-
 	if (month < 11) {
 		nextButton.classList -= ' disabled';
 		nextButton.disabled = false;
@@ -24,7 +23,6 @@ function verifyMonth() {
 
 function createCalendar() {
 	const head = document.getElementById('calendar-title');
-
 	const date = new Date();
 	const info = {
 		currentDay: date.getDate(),
@@ -35,10 +33,10 @@ function createCalendar() {
 		})} ${String(date.getDate()).padStart(2, '0')}`,
 	};
 
+	document.getElementById('calendar-year').textContent = year;
 	head.textContent = info.headerDay;
 
 	const content = document.querySelector('.calendar__content');
-
 	const days = [];
 
 	for (let i = 0; i < info.firstDay; i++) {
@@ -61,7 +59,6 @@ function createCalendar() {
 		<span class="calendar__day">THU</span>
 		<span class="calendar__day">FRI</span>
 		<span class="calendar__day">SAT</span>`;
-
 	content.innerHTML += days.join('');
 }
 
@@ -70,9 +67,9 @@ function changeMonth(month, year = new Date().getFullYear()) {
 		createCalendar();
 		return;
 	}
+
 	const head = document.getElementById('calendar-title');
 	const content = document.querySelector('.calendar__content');
-
 	const date = new Date(year, month);
 	const info = {
 		firstDay: new Date(date.getFullYear(), date.getMonth(), 1).getDay(),
@@ -82,8 +79,8 @@ function changeMonth(month, year = new Date().getFullYear()) {
 		})}`,
 	};
 
+	document.getElementById('calendar-year').textContent = year;
 	head.textContent = info.monthDay;
-
 	const days = [];
 
 	for (let i = 0; i < info.firstDay; i++) {
@@ -102,7 +99,6 @@ function changeMonth(month, year = new Date().getFullYear()) {
 		<span class="calendar__day">THU</span>
 		<span class="calendar__day">FRI</span>
 		<span class="calendar__day">SAT</span>`;
-
 	content.innerHTML += days.join('');
 }
 

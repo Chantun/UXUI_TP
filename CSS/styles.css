@@ -468,6 +468,15 @@ header {
 	pointer-events: none;
 }
 
+.head__year {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 .head__buttons {
 	width: 51px;
 	display: flex;
@@ -503,6 +512,7 @@ header {
 .calendar__content {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 1fr repeat(6, 2fr);
 	place-items: center;
 	gap: 6px;
 }
