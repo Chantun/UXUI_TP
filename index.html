@@ -79,8 +79,21 @@
 						<a href="#" class="user-info user-info__img user-info__shop"></a>
 					</li>
 					<li class="search-container">
-						<button class="user-info user-info__img user-info__search"></button>
-						<input type="text" placeholder="Search..." class="search" />
+						<form class="search-container" role="search" id="search-form">
+							<button
+								class="user-info user-info__img user-info__search"
+								id="search-button"
+								type="button"
+							></button>
+							<input
+								type="search"
+								placeholder="Search..."
+								id="query"
+								name="query"
+								autocomplete="search"
+								style="display: none"
+							/>
+						</form>
 					</li>
 					<li>
 						<a class="user-info user-info__sign" href="#">Sign Up</a>
@@ -192,8 +205,13 @@
 						consectetur.
 					</p>
 				</div>
-				<form id="appointment_form" action="" class="appointment-form">
+				<form
+					id="appointment-form"
+					name="appointment-form"
+					class="appointment-form"
+				>
 					<article id="calendar" class="calendar">
+						<input type="text" name="day" id="input-day" hidden />
 						<div class="calendar__head">
 							<span id="calendar-title" class="head__title"></span>
 							<span id="calendar-year" class="head__year"></span>
@@ -207,38 +225,53 @@
 							</div>
 						</div>
 						<div class="calendar__content"></div>
+						<span class="error__span" id="calendar-error"></span>
 					</article>
 					<h3>Select A Time</h3>
 					<div class="flex-container buttons-container">
-						<input type="radio" id="opt1" name="time" />
+						<input type="radio" id="opt1" name="time" value="8:30-9:30" />
 						<label for="opt1" class="time-button">8:30 am - 9:30 am</label>
-						<input type="radio" id="opt2" name="time" />
+						<input type="radio" id="opt2" name="time" value="9:30-10:30" />
 						<label for="opt2" class="time-button">9:30 am - 10:30 am</label>
-						<input type="radio" id="opt3" name="time" />
+						<input type="radio" id="opt3" name="time" value="10:30-11:30" />
 						<label for="opt3" class="time-button">10:30 am - 11:30 am</label>
-						<input type="radio" id="opt4" name="time" />
+						<input type="radio" id="opt4" name="time" value="11:30-12:30" />
 						<label for="opt4" class="time-button">11:30 am - 12:30 pm</label>
 					</div>
+					<span class="error__span" id="radio-error"></span>
 					<div class="grid-container appointment__inputs-container">
 						<input
 							type="text"
 							class="appointment__input"
+							name="name"
+							autocomplete="name"
 							placeholder="Enter Your Name *"
+							required
 						/><input
 							type="email"
 							class="appointment__input"
+							name="email"
+							autocomplete="email"
 							placeholder="Enter Your Email *"
+							required
 						/><input
-							type="number"
+							type="tel"
 							class="appointment__input"
+							name="phone"
+							autocomplete="phone"
 							placeholder="Enter Phone Number *"
+							pattern="^\+?\d{7,15}$"
+							inputmode="numeric"
+							required
 						/>
 						<div class="dropdown">
 							<input
 								type="text"
 								class="appointment__input appointment__input--service"
+								name="service"
 								placeholder="Select Service"
 								readonly
+								required
 							/>
 							<ul class="dropdown__items">
 								<li>
@@ -248,7 +281,7 @@
 									<span class="dropdown__element--selection">Shaving</span>
 								</li>
 								<li>
-									<span class="dropdown__eelement--selection">Hair Dye</span>
+									<span class="dropdown__element--selection">Hair Dye</span>
 								</li>
 								<li>
 									<span class="dropdown__element--selection">Facial</span>
@@ -285,11 +318,14 @@
 						vulputate libero amet, consectetur adipiscin
 					</p>
 				</div>
-				<form id="contact_form" class="updated-form">
+				<form id="contact-form" name="contact-form" class="updated-form">
 					<input
 						type="email"
+						name="email"
+						autocomplete="email"
 						class="appointment__input updated-input"
 						placeholder="Enter your email"
+						required
 					/>
 					<input type="submit" value="Sign Up" class="submit updated-submit" />
 				</form>

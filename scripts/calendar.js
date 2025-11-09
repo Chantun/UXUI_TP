@@ -112,9 +112,11 @@ days.forEach((day) => {
 	day.addEventListener('click', () => {
 		days.forEach((d) => d.classList.remove('calendar__num--selected'));
 		day.classList += ' calendar__num--selected';
+		input.setAttribute('value', `${day.textContent}-${month}-${year}`);
 	});
 });
 
+const input = document.getElementById('input-day');
 const nextButton = document.getElementById('next');
 
 nextButton.addEventListener('click', () => {
@@ -133,6 +135,7 @@ nextButton.addEventListener('click', () => {
 		day.addEventListener('click', () => {
 			days.forEach((d) => d.classList.remove('calendar__num--selected'));
 			day.classList += ' calendar__num--selected';
+			input.setAttribute('value', `${day.textContent}-${month}-${year}`);
 		});
 	});
 });
@@ -155,6 +158,7 @@ previousButton.addEventListener('click', () => {
 		day.addEventListener('click', () => {
 			days.forEach((d) => d.classList.remove('calendar__num--selected'));
 			day.classList += ' calendar__num--selected';
+			input.setAttribute('value', `${day.textContent}-${month}-${year}`);
 		});
 	});
 });
