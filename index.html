@@ -30,14 +30,38 @@
 							>Services <img src="assets/images/DropDown.svg" alt=""
 						/></span>
 						<ul class="dropdown__items">
-							<li><a href="#">Hair Cut</a></li>
-							<li><a href="#">Shaving</a></li>
-							<li><a href="#">Hair Dye</a></li>
-							<li><a href="#">Facial</a></li>
-							<li><a href="#">Keratin Treatment</a></li>
-							<li><a href="#">Hair Removal</a></li>
-							<li><a href="#">Hair Treatment</a></li>
-							<li><a href="#">Wedding Package</a></li>
+							<li>
+								<a class="dropdown__element--link" href="#services">Hair Cut</a>
+							</li>
+							<li>
+								<a class="dropdown__element--link" href="#services">Shaving</a>
+							</li>
+							<li>
+								<a class="dropdown__element--link" href="#services">Hair Dye</a>
+							</li>
+							<li>
+								<a class="dropdown__element--link" href="#services">Facial</a>
+							</li>
+							<li>
+								<a class="dropdown__element--link" href="#services"
+									>Keratin Treatment</a
+								>
+							</li>
+							<li>
+								<a class="dropdown__element--link" href="#services"
+									>Hair Removal</a
+								>
+							</li>
+							<li>
+								<a class="dropdown__element--link" href="#services"
+									>Hair Treatment</a
+								>
+							</li>
+							<li>
+								<a class="dropdown__element--link" href="#services"
+									>Wedding Package</a
+								>
+							</li>
 						</ul>
 					</li>
 					<li>
@@ -209,18 +233,45 @@
 							class="appointment__input"
 							placeholder="Enter Phone Number *"
 						/>
-						<div class="select-container appointment__input">
-							<select name="sevice" class="input--select">
-								<option value="">Select Service</option>
-								<option value="hair_cut">Hair Cut</option>
-								<option value="shaving">Shaving</option>
-								<option value="hair_dye">Hair Dye</option>
-								<option value="facial">Facial</option>
-								<option value="keratin">Keratin Treatment</option>
-								<option value="hair_removal">Hair Removal</option>
-								<option value="hair_treatment">Hair Treatment</option>
-								<option value="wedding">Wedding Package</option>
-							</select>
+						<div class="dropdown">
+							<input
+								type="text"
+								class="appointment__input appointment__input--service"
+								placeholder="Select Service"
+								readonly
+							/>
+							<ul class="dropdown__items">
+								<li>
+									<span class="dropdown__element--selection">Hair Cut</span>
+								</li>
+								<li>
+									<span class="dropdown__element--selection">Shaving</span>
+								</li>
+								<li>
+									<span class="dropdown__eelement--selection">Hair Dye</span>
+								</li>
+								<li>
+									<span class="dropdown__element--selection">Facial</span>
+								</li>
+								<li>
+									<span class="dropdown__element--selection"
+										>Keratin Treatment</span
+									>
+								</li>
+								<li>
+									<span class="dropdown__element--selection">Hair Removal</span>
+								</li>
+								<li>
+									<span class="dropdown__element--selection"
+										>Hair Treatment</span
+									>
+								</li>
+								<li>
+									<span class="dropdown__element--selection"
+										>Wedding Package</span
+									>
+								</li>
+							</ul>
 						</div>
 					</div>
 					<input type="submit" value="Book Appointment" class="submit" />
@@ -323,7 +374,8 @@
 			</section>
 		</footer>
 
-		<script type="module" src="scripts/form.js"></script>
+		<script type="module" src="scripts/dropdown.js"></script>
 		<script type="module" src="scripts/calendar.js"></script>
+		<script type="module" src="scripts/form.js"></script>
 	</body>
 </html>

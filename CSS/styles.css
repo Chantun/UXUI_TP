@@ -125,8 +125,10 @@ header {
 	position: relative;
 }
 
-.dropdown__items {
-	display: none !important;
+.dropdown__items,
+.nav .dropdown__items {
+	box-sizing: border-box;
+	display: none;
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -135,10 +137,12 @@ header {
 	border-radius: 12px;
 	list-style: none;
 	padding: 16px 10px;
+	width: 100%;
 	min-width: 150px;
 }
 .dropdown__items li {
 	margin-bottom: 4px;
+	text-align: start;
 }
 .dropdown__items a {
 	color: var(--body-color);
@@ -149,8 +153,25 @@ header {
 	color: #fff;
 	text-decoration: underline;
 }
-.dropdown:hover .dropdown__items {
-	display: block !important;
+
+.dropdown__element--selection {
+	display: block;
+	border-radius: 8px;
+	transition: all 0.3s;
+}
+.dropdown__element--selection:hover {
+	color: var(--black-ligth);
+	background-color: var(--primary-color);
+	padding: 4px 10px;
+}
+
+.dropdown__items .dropdown__element--link {
+	color: #fff;
+	transition: all 0.3s;
+}
+.dropdown__items .dropdown__element--link:hover {
+	color: var(--primary-color);
+	text-decoration: underline;
 }
 
 .search-container {
@@ -398,10 +419,17 @@ header {
 	color: var(--body-color);
 	transition: all 0.3s;
 }
-.appointment__input:hover {
+.appointment__input--service {
+	cursor: pointer;
+	box-sizing: border-box;
+	width: 100%;
+}
+.appointment__input:hover,
+.appointment__input--service:focus {
 	background-color: var(--primary-color);
 	border-color: #0000;
 	color: var(--black-ligth);
+	outline: none;
 }
 .appointment__input:hover::placeholder {
 	color: var(--black-ligth);
@@ -831,7 +859,7 @@ header {
 	}
 
 	.updated-form {
-		width: 100%;
+		width: 95%;
 	}
 
 	.contact-section {
