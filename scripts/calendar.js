@@ -45,7 +45,7 @@ function createCalendar() {
 	for (let i = 1; i <= info.lastDay; i++) {
 		days.push(
 			i == info.currentDay
-				? `<span class="calendar__num calendar__num--current">${i}</span>`
+				? `<span class="calendar__num calendar__num--upcoming calendar__num--current">${i}</span>`
 				: i < info.currentDay
 				? `<span class="calendar__num">${i}</span>`
 				: `<span class="calendar__num calendar__num--upcoming">${i}</span>`

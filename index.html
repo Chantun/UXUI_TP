@@ -66,9 +66,11 @@
 		</header>
 		<main>
 			<section class="title-section">
-				<div class="title-container div-align">
-					<h2 class="title">Services</h2>
-					<p class="subtitle">Home • Services</p>
+				<div class="title-section__background">
+					<div class="title-container div-align">
+						<h2 class="title">Services</h2>
+						<p class="subtitle">Home • Services</p>
+					</div>
 				</div>
 			</section>
 			<section class="main-section">
@@ -184,9 +186,14 @@
 					</article>
 					<h3>Select A Time</h3>
 					<div class="flex-container buttons-container">
-						<button>8:30 am - 9:30 am</button><button>9:30 am - 10:30 am</button
-						><button>10:30 am - 11:30 am</button
-						><button>11:30 am - 12:30 pm</button>
+						<input type="radio" id="opt1" name="time" />
+						<label for="opt1" class="time-button">8:30 am - 9:30 am</label>
+						<input type="radio" id="opt2" name="time" />
+						<label for="opt2" class="time-button">9:30 am - 10:30 am</label>
+						<input type="radio" id="opt3" name="time" />
+						<label for="opt3" class="time-button">10:30 am - 11:30 am</label>
+						<input type="radio" id="opt4" name="time" />
+						<label for="opt4" class="time-button">11:30 am - 12:30 pm</label>
 					</div>
 					<div class="grid-container appointment__inputs-container">
 						<input
@@ -245,7 +252,7 @@
 						Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
 						vulputate libero et velit interdum, ac aliquet odio mattis.
 					</p>
-					<nav class="nav-social-media">
+					<nav class="social-media">
 						<ul>
 							<li>
 								<a href="https://www.facebook.com/" target="_blank"
@@ -266,7 +273,7 @@
 					</nav>
 				</div>
 				<div>
-					<nav class="nav-social-media">
+					<nav class="social-media">
 						<ul class="contact-section__ul">
 							<li><h4>Services</h4></li>
 							<li>Hair Cut</li>
